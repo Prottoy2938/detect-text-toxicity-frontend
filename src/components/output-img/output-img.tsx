@@ -5,8 +5,8 @@ import { Props } from "./output-img.model";
 const OutputImg: React.FC<Props> = (props: Props) => {
   const { imgURL, imgAlt } = props;
   return (
-    <Box>
-      <Heading mb="30px">Output Image</Heading>
+    <Box display="table" m="0 auto">
+      {/* <Heading mb="30px">Output Image</Heading> */}
 
       <Image
         boxSize="90%"
