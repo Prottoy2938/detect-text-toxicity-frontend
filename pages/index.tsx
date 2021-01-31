@@ -8,15 +8,20 @@ import {
   useToast,
   Text,
   Link,
+  Spinner,
 } from "@chakra-ui/react";
 import axios from "axios";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { NextSeo } from "next-seo";
 import ResultTable from "../src/components/result-table/result-table";
+import { ResultDataType } from "../src/common-types";
 
 const Home: React.FC = () => {
-  const [sentence, setSentence] = useState("");
+  const [sentence, setSentence] = useState(
+    "We're dudes on computer, moron. You're quite astonishingly stupid."
+  );
   const [submitRunning, setSubmitRunning] = useState(false);
+  const [resultData, setResultData] = useState<ResultDataType>(null);
 
   const toast = useToast();
 
@@ -30,15 +35,17 @@ const Home: React.FC = () => {
       axios
         .post("https://ttd-api-demo.herokuapp.com/", {
           text: sentence,
-          key: "m1ZJCGh5Q3TX",
         })
         .then((res) => {
           const {
             data: { result },
           } = res;
           console.log(result);
+          setResultData(result);
+          setSubmitRunning(false);
         })
         .catch((e) => {
+          setSubmitRunning(false);
           console.error(e);
           toast({
             title: "Something Went Wrong!",
@@ -50,6 +57,7 @@ const Home: React.FC = () => {
           });
         });
     } else {
+      setSubmitRunning(false);
       toast({
         description: "No text provided",
         status: "warning",
@@ -93,7 +101,11 @@ const Home: React.FC = () => {
           </GridItem>
 
           <GridItem colSpan={4}>
-            <ResultTable />
+            {submitRunning ? (
+              <Spinner color="red.500" size="xl" display="table" m="0 auto" />
+            ) : resultData ? (
+              <ResultTable resultData={resultData} />
+            ) : null}
           </GridItem>
         </Grid>
         <Box pos="fixed" right={5} bottom={5}>
