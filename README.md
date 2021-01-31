@@ -1,9 +1,6 @@
-# Next.js + TypeScript + Jest + ESLint
+# Detect Text Toxicity
 
-> This example shows how to configure Jest, TypeScript and ESLint to work with Nextjs
+**Backend: https://github.com/Prottoy2938/expressjs-text-toxicity-detection-api**
 
-This includes Next.js built-in support for Global CSS, CSS Modules, and TypeScript.
-
-## Usage
-
-Just clone this template and get started, theres already a demo component a unit test file.
+Visit: https://detect-text-toxicity.vercel.app/
+Github: https://github.com/Prottoy2938/expressjs-text-toxicity-detection-api
