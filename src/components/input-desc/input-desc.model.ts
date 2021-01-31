@@ -1,4 +1,4 @@
 export interface Props {
-  description: string;
-  handleDescriptionChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  sentence: string;
+  handlesentenceChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
