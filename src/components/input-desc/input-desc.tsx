@@ -11,7 +11,7 @@ const InputDesc: React.FC<Props> = (props: Props) => {
       <Textarea
         value={sentence}
         onChange={handlesentenceChange}
-        placeholder="Describe Image"
+        placeholder="Your Sentence"
         width="90%"
         height="150px"
       />

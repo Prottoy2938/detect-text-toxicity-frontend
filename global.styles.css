@@ -1,0 +1,103 @@
+.answerTableL {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 100%;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.answerTableL thead tr {
+  background-color: #fafafa;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 1.5715;
+  font-size: 14px;
+}
+
+.answerTableL thead tr th {
+  font-weight: 500;
+}
+.answerTableL th,
+.answerTableL td {
+  padding: 12px 15px;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 1.5715;
+  font-size: 14px;
+}
+.answerTableL tbody tr {
+  border-bottom: 1px solid #dddddd;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 1.5715;
+  font-size: 14px;
+}
+.answerTableL tbody tr:hover {
+  background-color: #fafafa;
+}
+
+/*===== For dark mode ====*/
+.answerTableD {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 100%;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
+}
+
+.answerTableD thead tr {
+  background-color: rgba(59, 58, 73, 0.9);
+
+  text-align: left;
+
+  line-height: 1.5715;
+  font-size: 14px;
+}
+
+.answerTableD thead tr th {
+  font-weight: 500;
+  color: #e2e8f0;
+}
+.answerTableD th,
+.answerTableD td {
+  padding: 12px 15px;
+  line-height: 1.5715;
+  font-size: 14px;
+  text-align: start;
+}
+.answerTableD tbody tr {
+  background-color: rgba(59, 58, 73, 0.4);
+  border-bottom: 1px solid #dddddd;
+  line-height: 1.5715;
+  font-size: 14px;
+}
+.answerTableD tbody tr:hover {
+  background-color: rgba(59, 58, 73, 0.5);
+}
+
+.answerTableD tbody tr td {
+  color: #e2e8f0;
+}
+
+/* Table style End */
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+.divider p {
+  background: transparent;
+  font-weight: 500;
+  margin: 0 20px;
+}
+.divider:before,
+.divider:after {
+  background-color: #000000;
+  height: 0.1rem;
+  content: "";
+  flex: 1;
+}

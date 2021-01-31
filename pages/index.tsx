@@ -12,6 +12,7 @@ import {
 import axios from "axios";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { NextSeo } from "next-seo";
+import ResultTable from "../src/components/result-table/result-table";
 
 const Home: React.FC = () => {
   const [sentence, setSentence] = useState("");
@@ -81,17 +82,10 @@ const Home: React.FC = () => {
               size="lg"
               pr={24}
               pl={24}
-              bgGradient="linear(to-r,gray.300,yellow.400,pink.200)"
               display="table"
               m="0 auto"
               mt={16}
-              _hover={{
-                bgGradient: "linear(to-r,gray.400,yellow.500,pink.300)",
-              }}
-              _active={{
-                bgGradient: "linear(to-r,gray.400,yellow.500,pink.300)",
-                transform: "scale(0.98)",
-              }}
+              colorScheme="blue"
               onClick={handleSubmit}
             >
               Check
@@ -99,7 +93,7 @@ const Home: React.FC = () => {
           </GridItem>
 
           <GridItem colSpan={4}>
-            {/* Create a demo image, and on page load, show that image with the sentence */}
+            <ResultTable />
           </GridItem>
         </Grid>
         <Box pos="fixed" right={5} bottom={5}>
@@ -108,7 +102,7 @@ const Home: React.FC = () => {
             color="teal.500"
             href="https://github.com/Prottoy2938/expressjs-text-toxicity-detection-api"
           >
-            <Text>
+            <Text fontSize="sm">
               View the toxicity detection API <ExternalLinkIcon mx="2px" />
             </Text>
           </Link>
